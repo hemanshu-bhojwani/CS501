@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.geoquiz.databinding.ActivityMainBinding
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
@@ -53,11 +54,11 @@ class MainActivity : AppCompatActivity() {
     private fun checkAnswer(userAnswer: Boolean) {
         val correctAnswer = questionBank[currentIndex].answer
         val messageResId = if (userAnswer == correctAnswer) {
-            R.string.correct_toast
+            R.string.correct_snack
         } else {
-            R.string.incorrect_toast
+            R.string.incorrect_snack
         }
-        Toast.makeText(this, messageResId, Toast.LENGTH_SHORT)
-            .show()
+
+        Snackbar.make(findViewById(android.R.id.content), messageResId, Snackbar.LENGTH_SHORT).show()
     }
 }
