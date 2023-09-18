@@ -59,6 +59,6 @@ class MainActivity : AppCompatActivity() {
             R.string.incorrect_snack
         }
 
-        Snackbar.make(findViewById(android.R.id.content), messageResId, Snackbar.LENGTH_SHORT).show()
+        Snackbar.make(binding.root, messageResId, Snackbar.LENGTH_SHORT).show()
     }
 }
