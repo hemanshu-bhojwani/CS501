@@ -2,3 +2,4 @@
 
 ## Directory
 - **HW1 App**: HelloWorld Folder
+- **HW2 App**: GeoQuiz Folder
